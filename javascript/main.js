@@ -14,7 +14,7 @@ function wait(milisec) {
 let size_of_array=document.querySelector(".slider")
 
 size_of_array.addEventListener('input',()=>{
-    console.log(size_of_array.value,typeof(size_of_array.value))
+    
     createArray(parseInt(size_of_array.value))
     
 })
