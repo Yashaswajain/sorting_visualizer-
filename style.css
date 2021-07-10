@@ -52,7 +52,8 @@ body{
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin:0px 5px;
 }
 
 .array_bars{
@@ -65,7 +66,8 @@ body{
     justify-content: center;
 }
 .bar{
-    width:20px;
-    background-color: black;
+    background-color:black;
     margin:0px 2px;
+    box-shadow: 1px 1px 4px black;
+    border-radius: 20px;
 }

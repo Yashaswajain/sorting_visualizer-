@@ -1,12 +1,5 @@
 const quick=document.querySelector(".quick")
 
-function wait(milisec) { 
-    return new Promise((resolve,reject)=> { 
-        setTimeout(() => { resolve('') }, milisec); 
-    }) 
-}
-
-
 const pivot=async(bars,l,h)=>{
        let value=parseInt(bars[h].style.height)
        bars[h].style.backgroundColor='red'

@@ -1,10 +1,5 @@
 const bubble=document.querySelector(".bubble")
 
-function wait(milisec) { 
-    return new Promise((resolve,reject)=> { 
-        setTimeout(() => { resolve('') }, milisec); 
-    }) 
-}
 
 const BubbleSort=async()=>{
     const bars=document.querySelectorAll(".bar")

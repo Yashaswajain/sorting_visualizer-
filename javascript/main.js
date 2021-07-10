@@ -5,11 +5,18 @@ function swap(el1, el2) {
     el2.style.height = temp;
     
 }
+const speed=document.querySelector(".speed")
+let increaseSpeedBy=0
+speed.addEventListener('input',()=>{
+    console.log(speed.value,typeof(speed.value))
+    increaseSpeedBy=parseInt(speed.value)
+})
 function wait(milisec) { 
     return new Promise((resolve,reject)=> { 
-        setTimeout(() => { resolve('') }, milisec); 
+        setTimeout(() => { resolve('') }, milisec-increaseSpeedBy); 
     }) 
 }
+
 //get the size
 let size_of_array=document.querySelector(".slider")
 
@@ -35,11 +42,21 @@ const createArray=(size_of_array)=>{
         arr.push(Math.floor(Math.random() *130) + 1);
     }
     let array_bars=document.querySelector(".array_bars")
-     
+    let width=30
+     if(size_of_array>20&&size_of_array<=40){
+         width=20
+     }
+     else if(size_of_array>40&&size_of_array<60){
+         width=10
+     }
+     else if(size_of_array>=60&&size_of_array<=150){
+         width=5
+     }
     //append each value of array as a child in array_bars
     arr.map((element)=>{
         let bar=document.createElement("div")
         bar.style.height=`${element*3}px`
+        bar.style.width=`${width}px`
         bar.classList.add("bar")
         array_bars.appendChild(bar)
     })

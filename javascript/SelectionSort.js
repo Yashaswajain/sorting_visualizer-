@@ -1,10 +1,5 @@
 const selection=document.querySelector(".selection")
 
-function wait(milisec) { 
-    return new Promise(resolve => { 
-        setTimeout(() => { resolve('') }, milisec); 
-    }) 
-}
 
 const SelectionSort=async()=>{ 
 let bars=document.querySelectorAll(".bar")

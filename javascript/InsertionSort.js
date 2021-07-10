@@ -1,11 +1,5 @@
 const insertion=document.querySelector(".insertion")
 
-function wait(milisec) { 
-    return new Promise(resolve => { 
-        setTimeout(() => { resolve('') }, milisec); 
-    }) 
-}
-
 const InsertionSort=async()=>{
     const bars=document.querySelectorAll(".bar")
     for(let i=1;i<bars.length;i++){
